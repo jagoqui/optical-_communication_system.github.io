@@ -1,0 +1,108 @@
+body {
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+#select_channel {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+#Select_channel label * {
+    display: inline-flex;
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 2em;
+}
+
+#types_celds_TX,
+#matrix figure {
+    padding: 0;
+    margin: 0px;
+}
+
+#types_celds_TX,
+#types_celds_RX {
+    display: none;
+    border: 5px black solid;
+    align-items: center;
+}
+
+#types_celds_TX img,
+#control_bar img {
+    width: 2em;
+    height: auto;
+    border: 1px black solid
+}
+
+#control_bar {
+    display: inline-flex;
+    margin-left: 1em;
+    margin-top: 0em;
+}
+
+#control_bar img {
+    width: 3.5em;
+}
+
+#control_bar img:hover {
+    border: 3px solid red;
+}
+
+#matrix {
+    border: 1px black solid;
+    padding: 0;
+    margin-top: 1em;
+}
+
+
+#matrix figure img {
+    width: 2em;
+    height: auto;
+    border: 1px black solid;
+    margin-left: 0px;
+}
+
+#types_celds_TX figure {
+    display: inline-block;
+    padding: 0;
+    margin: 0px;
+    margin-left: 2em;
+}
+
+figure:hover {
+    border: 2px yellow solid;
+}
+
+#caption_hide {
+    font-size: 1.5em;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+#caption_hide:hover{
+    border:0.2em solid green;
+}
+#rx_input_text {
+    width: 6em;
+    font-size: 1.5em;
+    color: blue;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#types_celds_RX button {
+    background-color: transparent;
+    font: italic 1.5em bolder;
+    color: red;
+}
+caption{
+    display: none;
+    clear: both;
+}
+figure *{
+    /* Quitar padding */
+}

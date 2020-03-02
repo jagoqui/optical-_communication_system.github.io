@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optical communication system</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="Select_channel">
+        <h1>Optical communication system</h1>
+        <label>
+            <input id="TX" type="radio" name="Select_channel" onclick="section_toggle(this)">
+            <h2>TX</h2>
+        </label>
+        <label>
+            <input id="RX" type="radio" name="Select_channel" onclick="section_toggle(this)">
+            <h2>RX</h2>
+        </label>
+    </div>
+    <div id="types_celds_TX">
+        <figure onclick="add_figure_matrix(this)"><img src="images/000.png"><caption>000</caption></figure>
+        <figure onclick="add_figure_matrix(this)"><img src="images/001.png"><caption>001</caption></figure>
+        <figure onclick="add_figure_matrix(this)"><img src="images/010.png"><caption>010</caption></figure>
+        <figure onclick="add_figure_matrix(this)"><img src="images/011.png"><caption>011</caption></figure>
+        <figure onclick="add_figure_matrix(this)"><img src="images/100.png"><caption>100</caption></figure>
+        <figure onclick="add_figure_matrix(this)"><img src="images/101.png"><caption>101</caption></figure>
+        <figure onclick="add_figure_matrix(this)"><img src="images/110.png"><caption>110</caption></figure>
+        <figure onclick="add_figure_matrix(this)"><img src="images/111.png"><caption>111</caption></figure>
+    </div>
+    <div id="types_celds_RX">
+        <input type="number" id="rx_input_text" onkeydown="if(event.keyCode==13){document.getElementById(caption_hide).click()};" autocomplete="on" required>
+        <button type="submit" onclick="decode(document.getElementById('rx_input_text').value)">Decode</button>
+    </div>
+    <div id="control_bar">
+        <img src="images/arrow-angle-pointing-down.png" title="BREAK LINE" onclick="break_line_matrix()">
+        <img src="images/reply-arrow.png" title="DELETE LAST" onclick="delete_img_matrix(this.id)">
+        <img src="images/refresh-arrow.png" title="RESET" onclick="reset()">
+        <button id="caption_hide" type="checkbox" onclick="caption_hide()">Show coding caption</button>
+        <button id="copy_coded_matrix" type="checkbox" onclick="copy_coded_matrix('code_frame_text')">Copy coded matrix</button>
+    </div>
+    <div id="matrix"></div>
+    <p id="code_frame_text"></p>
+    <script src="js/javascript.js"></script>
+</body>
+</html>
